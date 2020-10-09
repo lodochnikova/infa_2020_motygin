@@ -34,8 +34,9 @@ def sun(surface, x, y, radius, color):
     circle(surface, GRAYPEACH, (round(x + radius / 2.5), round(y - radius / 8)), round(radius / 5))
     circle(surface, WHITE, (round(x - radius / 2.5), round(y - radius / 8)), round(radius / 5) - 2)
     circle(surface, WHITE, (round(x + radius / 2.5), round(y - radius / 8)), round(radius / 5) - 2)
-    ellipse(surface, PEACH, (x + radius, y + radius, radius, 2 * radius))
-
+    circle(surface, BLACK, (round(x + radius / 2.5), round(y - radius / 8)), round(radius / 15))
+    circle(surface, BLACK, (round(x - radius / 2.5), round(y - radius / 8)), round(radius / 15))
+    arc = pygame.draw.arc(surface, BLACK, (x - radius / 4, y + radius / 4, radius / 2, radius / 4), -3, 0)
 def dot_array(y_0, height, depth, accelerations):
     res = [(0, y_0)]
     v_x = 1
